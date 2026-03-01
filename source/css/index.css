@@ -104,6 +104,11 @@ hr {
 	padding: 1.38rem;
 }
 
+.note {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
 /* ||ELEMENT */
 .button__text {
 	background: 0.81rem center no-repeat url("../img/thunder.png") var(--container-button-green);
