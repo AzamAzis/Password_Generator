@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Password Generator</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="source/css/index.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="title">
+				<h1>Generate a <span class="title--block title--green">random password</span></h1>
+				<h2>Never use an insecure password again.</h2>
+			</div>
+
+			<div class="generator flex">
+				<div class="button" id="generatorButton">
+					<!-- <img src="source/img/thunder.png" alt="passwords generator" /> -->
+					<input class="button__text" id="generator" type="button" value="Generate Passwords" />
+				</div>
+
+				<div class="length flex">
+					<h3 class="length__title">Length</h3>
+					<output class="length__output" id="lengthOutput" for="length">4</output>
+					<input
+						class="length__input"
+						id="length"
+						type="range"
+						min="4"
+						max="10"
+						value="4"
+						step="1" />
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="passwords">
+				<output class="passwords__output relative flex" id="outputOne" for="generator">
+					<span class="absolute output" id="passwordOne">
+						<img
+							class="passwords__dots"
+							width="20"
+							height="5"
+							src="source/img/dots.png"
+							alt="Password" />
+					</span>
+				</output>
+				<output class="passwords__output relative flex" id="outputTwo" for="generator">
+					<span class="absolute output" id="passwordTwo">
+						<img
+							class="passwords__dots"
+							width="20"
+							height="5"
+							src="source/img/dots.png"
+							alt="Password" />
+					</span>
+				</output>
+				<output class="passwords__output relative flex" id="outputThree" for="generator">
+					<span class="absolute output" id="passwordThree">
+						<img
+							class="passwords__dots"
+							width="20"
+							height="5"
+							src="source/img/dots.png"
+							alt="Password" />
+					</span>
+				</output>
+				<output class="passwords__output relative flex" id="outputFour" for="generator">
+					<span class="absolute output" id="passwordFour">
+						<img
+							class="passwords__dots"
+							width="20"
+							height="5"
+							src="source/img/dots.png"
+							alt="Password" />
+					</span>
+				</output>
+			</div>
+		</div>
+
+		<script defer src="source/js/index.js"></script>
+	</body>
+</html>

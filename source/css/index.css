@@ -1,0 +1,251 @@
+:root {
+	/* *GENERAL COLOR */
+	--white: #ffffff;
+
+	/* *TEXT COLOR */
+	--title-green: #4adf86;
+	--text-grey: #d5d4d8;
+	--text-green: #55f991;
+
+	/* *BACKGROUND COLOR */
+	--base-black: #1c1c1c;
+	--wrapper-black: #1f2937;
+	--container: #273549;
+	--container-button-green: #10b981;
+	--line-gray: #2f3e53;
+}
+
+/* ||GENERAL STYLES */
+html {
+	box-sizing: border-box;
+	scrollbar-color: var(--base-black) var(--container-button-green);
+}
+
+*,
+*::before,
+*::after {
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #1c1c1c;
+	color: var(--white);
+	display: grid;
+	font-family: "Karla", sans-serif;
+	line-height: 1.4;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+:focus-visible {
+	outline: 1.75px dotted #ffffff;
+	outline-offset: 0.15rem;
+}
+
+h1 {
+	font-size: clamp(1.25rem, calc(0.795rem + 2.273vw), 2.5rem);
+	font-weight: 800;
+	letter-spacing: -0.03em;
+	line-height: 1;
+	margin-bottom: 0.63rem;
+}
+
+h2 {
+	color: var(--text-grey);
+	font-size: clamp(0.63rem, calc(0.398rem + 1.136vw), 1.25rem);
+	font-weight: normal;
+}
+
+input {
+	color: inherit;
+	font-family: inherit;
+}
+
+hr {
+	border: none;
+	height: 1.25px;
+	margin-bottom: 2.19rem;
+	background-color: var(--line-gray);
+}
+
+/* ||BLOCK */
+.wrapper {
+	background-color: var(--wrapper-black);
+	margin: 1.5rem auto;
+	padding: 3rem;
+	width: 80%;
+}
+
+.title {
+	margin-bottom: 3.56rem;
+}
+
+.generator {
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 2.5rem;
+	gap: 1.5rem;
+}
+
+.button {
+	cursor: pointer;
+	margin-top: 1rem;
+	order: 1;
+	align-self: center;
+}
+
+.length {
+	background-color: var(--container);
+	border-radius: 7px;
+	flex-direction: column;
+	padding: 1.38rem;
+}
+
+/* ||ELEMENT */
+.button__text {
+	background: 0.81rem center no-repeat url("../img/thunder.png") var(--container-button-green);
+	border: none;
+	border-radius: 6px;
+	cursor: inherit;
+	font-size: clamp(0.88rem, calc(0.648rem + 1.136vw), 1.5rem);
+	line-height: 1.5;
+	padding: 0.56rem 0.63rem 0.56rem 2.63rem;
+	user-select: none;
+}
+
+.button__text:active {
+	opacity: 0.95;
+	scale: 0.97;
+}
+
+.length__title {
+	font-size: 0.88rem;
+}
+
+.length__output {
+	font-size: clamp(1.75rem, calc(1.523rem + 1.136vw), 2.38rem);
+	text-align: center;
+}
+
+.length__input {
+	align-self: center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 10px;
+	height: 0.81rem;
+	width: clamp(4.125rem, calc(-3.438rem + 46.25vw), 20rem);
+	margin-top: 1rem;
+}
+
+.length__input::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: var(--container-button-green);
+	border-radius: 50%;
+	height: 1rem;
+	width: 1rem;
+}
+
+.length__input::-webkit-slider-thumb:active {
+	opacity: 0.9;
+}
+
+.length__input::-moz-range-thumb {
+	-moz-appearance: none;
+	appearance: none;
+	background-color: var(--container-button-green);
+	border-radius: 50%;
+	height: 1rem;
+	width: 1rem;
+}
+
+.length__input::-moz-range-thumb {
+	opacity: 0.9;
+}
+
+.passwords {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1.5rem;
+	row-gap: 1.69rem;
+	justify-content: center;
+}
+
+.passwords__output {
+	background-color: var(--container);
+	padding: clamp(1.563rem, calc(1.125rem + 1.75vw), 2.438rem)
+		clamp(7.563rem, calc(4.75rem + 11.25vw), 13.188rem);
+	border-radius: 6px;
+	-webkit-tap-highlight-color: transparent;
+	justify-content: center;
+	align-items: center;
+	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: auto;
+}
+
+.passwords__dots {
+	width: 1.25rem;
+	height: 0.31rem;
+	user-select: none;
+}
+
+/* ||MODIFIER */
+.title--block {
+	display: block;
+}
+
+.title--green {
+	color: var(--title-green);
+}
+
+/* ||UTILITIES */
+.flex {
+	display: flex;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+@media (hover: none) {
+	.passwords__output:active {
+		scale: 0.98;
+	}
+}
+
+@media (hover: hover) {
+	.button__text:hover {
+		opacity: 0.85;
+	}
+
+	.button__text:active {
+		opacity: 1;
+	}
+
+	.passwords__output:hover {
+		box-shadow: 0 3px 4px rgba(255, 255, 255, 0.253);
+	}
+
+	.passwords__output:active {
+		box-shadow: none;
+	}
+}
+
+@media (min-width: 56.75rem) {
+	.button {
+		order: 0;
+	}
+}
+/* 
+output * {
+	color: black;
+} */
