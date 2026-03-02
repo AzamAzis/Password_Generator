@@ -8,10 +8,10 @@ const passwordContainers = document.querySelectorAll(".passwords__output");
 const passwordOutputs = document.querySelectorAll(".output");
 
 // ||SET THE LENGTH
-lengthOutput.textContent = String(lengths.value);
+lengthOutput.textContent = lengths.value;
 
 lengths.addEventListener("input", (event) => {
-	lengthOutput.textContent = String(event.target.value);
+	lengthOutput.textContent = event.target.value;
 	// lengths.setAttribute("value", event.target.value);
 });
 
@@ -40,8 +40,8 @@ generatorButton?.addEventListener("click", () => {
 			password += char[randomPassword];
 		}
 
-		passwordOutputs[i].textContent = String(password);
-		passwordContainers[i].setAttribute("data-password", String(password));
+		passwordOutputs[i].textContent = password;
+		passwordContainers[i].setAttribute("data-password", password);
 	}
 });
 
@@ -51,7 +51,9 @@ const copy = (event) => {
 	const target = event.currentTarget;
 	if (target.dataset.password == undefined) return;
 
-	navigator.clipboard.writeText(String(target.dataset.password)).then(() => alert("Copied"));
+	navigator.clipboard
+		.writeText(String(target.dataset.password))
+		.then(() => alert("Copied"));
 };
 
 for (const passwordContainer of passwordContainers) {
