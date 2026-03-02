@@ -71,6 +71,10 @@ hr {
 	background-color: var(--line-gray);
 }
 
+img {
+	display: block;
+}
+
 /* ||BLOCK */
 .wrapper {
 	background-color: var(--wrapper-black);
@@ -102,6 +106,14 @@ hr {
 	border-radius: 7px;
 	flex-direction: column;
 	padding: 1.38rem;
+}
+
+.passwords {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1.5rem;
+	row-gap: 1.69rem;
+	justify-content: center;
 }
 
 .note {
@@ -172,14 +184,6 @@ hr {
 	opacity: 0.9;
 }
 
-.passwords {
-	display: flex;
-	flex-wrap: wrap;
-	column-gap: 1.5rem;
-	row-gap: 1.69rem;
-	justify-content: center;
-}
-
 .passwords__output {
 	background-color: var(--container);
 	padding: clamp(1.563rem, calc(1.125rem + 1.75vw), 2.438rem)
@@ -188,7 +192,6 @@ hr {
 	-webkit-tap-highlight-color: transparent;
 	justify-content: center;
 	align-items: center;
-	overflow: auto;
 	scrollbar-width: thin;
 	scrollbar-color: auto;
 }
@@ -250,7 +253,3 @@ hr {
 		order: 0;
 	}
 }
-/* 
-output * {
-	color: black;
-} */
